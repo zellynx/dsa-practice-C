@@ -8,7 +8,7 @@ int main(void){
   for(int i=1; i<=5; i++){
     if(a[i] > max) max = a[i];
   }
-  print("Max: %d\n", max);
+  printf("Max: %d\n", max);
   
   //second-largest
   max = a[0];
@@ -20,7 +20,7 @@ int main(void){
       max = a[i];
       hasSecondLargest = 1;
     }
-    else if(hasSecondLargest && a[i] < max && secondLargest > a[i]){
+    else if(hasSecondLargest && max > a[i] && a[i] > secondLargest){
       secondLargest = a[i];
     }
   }
