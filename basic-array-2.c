@@ -11,20 +11,22 @@ int main(void){
   printf("Max: %d\n", max);
   
   //second-largest
-  max = a[0];
   int secondLargest;
-  int hasSecondLargest = 0;
-  for(int i=1; i<=5; i++){
-    if(a[i] > max){
-      secondLargest = max;
-      max = a[i];
-      hasSecondLargest = 1;
+  int isAssigned = 0;
+  for(int i=0; i<=5; i++){
+    if(isAssigned){
+        if(secondLargest>a[i] && a[i] < max){
+        secondLargest = max;
+        max = a[i];
+      }
     }
-    else if(hasSecondLargest && max > a[i] && a[i] > secondLargest){
-      secondLargest = a[i];
+    else{
+      if(a[i] < max){
+        secondLargest = a[i];
+      }
     }
   }
-  if(!hasSecondLargest) secondLargest = max;
+  if(!isAssigned) secondLargest = max;
   printf("Second Largest: %d", secondLargest);
   
   //search 8
