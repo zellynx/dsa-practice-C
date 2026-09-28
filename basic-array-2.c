@@ -16,13 +16,13 @@ int main(void){
   for(int i=0; i<=5; i++){
     if(isAssigned){
         if(secondLargest>a[i] && a[i] < max){
-        secondLargest = max;
-        max = a[i];
+        secondLargest = a[i];
       }
     }
     else{
       if(a[i] < max){
         secondLargest = a[i];
+        isAssigned = 1;
       }
     }
   }
