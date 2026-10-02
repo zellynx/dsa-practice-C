@@ -11,7 +11,7 @@ int main(void){
     scanf("%d", &a[i]);
   }
   for(int i=0; i<n; i++){    
-    print("%d", a[i]);
+    printf("%d", a[i]);
   }
   
   int insert_idx;
