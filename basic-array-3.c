@@ -6,7 +6,7 @@ int main(void){
   
   printf("Enter no.of elements: ");
   scanf("%d", &n);
-  print("Enter elements: ");
+  printf("Enter elements: ");
   for(int i=0; i<n; i++){    
     scanf("%d", &a[i]);
   }
@@ -31,7 +31,7 @@ int main(void){
   scanf("%d", &delete_idx);
   if(delete_idx<0 || delete_idx>=n) return 1;
   if(n==0) return 1;
-  for(int i=delete_idx; i<n; i++){
+  for(int i=delete_idx; i<n-1; i++){
     a[i] = a[i+1];
   }
   a[n-1] = 0;
