@@ -22,6 +22,7 @@ void zeros2End(int *nums, int numsSize){
       }
       nums[numsSize-1] = 0;
       numsSize--;
+      i--;
     }   
   }
 }
