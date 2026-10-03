@@ -25,6 +25,29 @@ void zeros2End(int *nums, int numsSize){
       i--;
     }   
   }
+  /*
+  for(int r=0, w=0; r<numsSize; r++){
+        if(nums[r] != 0){
+            if(r > w){                
+                nums[w] = nums[r];
+                nums[r] = 0;
+            }
+            w++;           
+        }    
+    }
+  */
+  /*
+  for(int i=0, zStart=-1; i<numsSize; i++){
+        if(nums[i] == 0 && zStart == -1){
+            zStart = i;
+        }
+        else if(nums[i] != 0 && zStart != -1){
+            nums[zStart] = nums[i];
+            nums[i] = 0;
+            zStart++;            
+        }            
+    }
+  */
 }
 
 void isPalindrome(int *nums, int numsSize){
