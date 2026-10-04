@@ -17,7 +17,7 @@ void bubbleSort(int *nums, int numsSize){
 }
 
 void bubbleSort2(int *nums, int numsSize){
-  int noSwapFlg = 1;
+  int noSwapFlg;
   do{
     noSwapFlg = 1;
     for(int j=0; j<numsSize-1; j++){
@@ -29,7 +29,7 @@ void bubbleSort2(int *nums, int numsSize){
       }
     }
     numsSize--;
-  }while(numsSize>1 && noSwapFlg!=1);
+  }while(numsSize>1 && !noSwapFlg);
 }
 
 void print(int *nums, int numsSize){
