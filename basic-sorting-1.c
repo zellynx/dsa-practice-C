@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 void bubbleSort(int *nums, int numsSize){
-  int noSwapFlg = 1;
+  int noSwapFlg;
   for(int sorted=0; sorted<numsSize-1; sorted++){
+    noSwapFlg = 1;
     for(int j=0; j<(numsSize-sorted)-1; j++){      
       if(nums[j] > nums[j+1]){
         noSwapFlg = 0;
@@ -18,6 +19,7 @@ void bubbleSort(int *nums, int numsSize){
 void bubbleSort2(int *nums, int numsSize){
   int noSwapFlg = 1;
   do{
+    noSwapFlg = 1;
     for(int j=0; j<numsSize-1; j++){
       if(nums[j] > nums[j+1]){
         noSwapFlg = 0;
@@ -27,7 +29,7 @@ void bubbleSort2(int *nums, int numsSize){
       }
     }
     numsSize--;
-  }while(numsSize>1 || noSwapFlg==1);
+  }while(numsSize>1 && noSwapFlg!=1);
 }
 
 void print(int *nums, int numsSize){
